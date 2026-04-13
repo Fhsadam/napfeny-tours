@@ -1,0 +1,6 @@
+/storage/*.sqlite
+/storage/*.json
+/uploads/gallery/*
+!/uploads/gallery/.gitkeep
+/docs/screenshots/*
+!.gitkeep
