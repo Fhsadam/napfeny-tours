@@ -1,0 +1,19 @@
+A csomag technikailag elkészült, de az alábbi adatokat a saját beadás előtt ki kell tölteni:
+
+1. Dokumentáció PDF:
+- saját név / nevek
+- saját Neptun-kód(ok)
+- publikus GitHub repository URL
+- internetes tárhely URL
+- FTP host / felhasználónév / jelszó
+- adatbázis host / név / felhasználó / jelszó
+
+2. Projekt:
+- config/database.php vagy környezeti változók átállítása MySQL-re
+- database/import_mysql.sql importálása a tárhely adatbázisába
+- publikus GitHub repo létrehozása és a helyi .git tartalom feltöltése
+- webtárhelyre feltöltés
+
+3. Git szerzők:
+A mintában Hallgato Egy / Hallgato Ketto szerepel.
+Ezeket a végső leadás előtt a saját adatokhoz kell igazítani.
