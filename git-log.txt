@@ -1,8 +1,0 @@
-35e451c | 2026-04-15 | Festő-Hegedűs Sándor Ádám | Repo tisztitasa es veglegesites
-b91c22c | 2026-04-15 | Festő-Hegedűs Sándor Ádám | Sajat nevek es neptun kodok beallitasa
-20d560e | 2026-04-15 | Festő-Hegedűs Sándor Ádám | Leadashoz szukseges kitoltendo adatok listaja
-202dcfb | 2026-04-15 | Turjányi Dávid | Projekt belépési pontok és konfigurációk
-d57c25c | 2026-04-14 | Festő-Hegedűs Sándor Ádám | Dokumentációhoz képernyőképek
-c313224 | 2026-04-13 | Turjányi Dávid | Adatforrások, seedek és statikus erőforrások
-322b5a4 | 2026-04-12 | Festő-Hegedűs Sándor Ádám | Oldalak, galéria, kapcsolat és CRUD felület
-45c8949 | 2026-04-11 | Turjányi Dávid | Front controller, routing és autentikáció
