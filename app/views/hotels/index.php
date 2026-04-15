@@ -20,7 +20,9 @@
                 <th>Tengerpart</th>
                 <th>Reptér</th>
                 <th>Félpanzió</th>
-                <th><?= is_admin() ? 'Műveletek' : 'Állapot' ?></th>
+                <?php if (is_admin()): ?>
+                    <th>Műveletek</th>
+                <?php endif; ?>
             </tr>
         </thead>
         <tbody>
@@ -34,17 +36,15 @@
                 <td><?= e((string) $hotel['tengerpart_tav']) ?> m</td>
                 <td><?= e((string) $hotel['repter_tav']) ?> km</td>
                 <td><?= (int) $hotel['felpanzio'] === 1 ? 'Igen' : 'Nem' ?></td>
-                <td class="actions">
-                    <?php if (is_admin()): ?>
+                <?php if (is_admin()): ?>
+                    <td class="actions">
                         <a class="btn btn-sm btn-outline" href="<?= e(url('crud/szerkeszt/' . $hotel['az'])) ?>">Szerkesztés</a>
                         <form action="<?= e(url('crud/torles/' . $hotel['az'])) ?>" method="post" onsubmit="return confirm('Biztosan törlöd ezt a szállodát?');">
                             <input type="hidden" name="_token" value="<?= e(csrf_token()) ?>">
                             <button class="btn btn-sm btn-danger" type="submit">Törlés</button>
                         </form>
-                    <?php else: ?>
-                        <span class="badge-readonly">Csak megtekintés</span>
-                    <?php endif; ?>
-                </td>
+                    </td>
+                <?php endif; ?>
             </tr>
         <?php endforeach; ?>
         </tbody>
