@@ -41,9 +41,7 @@
             <?php if (is_admin()): ?>
                 <a href="<?= e(url('uzenetek')) ?>" class="<?= current_route() === 'uzenetek' ? 'active' : '' ?>">Üzenetek</a>
             <?php endif; ?>
-            <?php if (is_admin()): ?>
-                <a href="<?= e(url('crud')) ?>" class="<?= str_starts_with(current_route(), 'crud') ? 'active' : '' ?>">CRUD</a>
-            <?php endif; ?>
+            <a href="<?= e(url('crud')) ?>" class="<?= str_starts_with(current_route(), 'crud') ? 'active' : '' ?>">CRUD</a>
             <?php if (!is_logged_in()): ?>
                 <a href="<?= e(url('bejelentkezes')) ?>" class="<?= current_route() === 'bejelentkezes' ? 'active' : '' ?>">Bejelentkezés</a>
             <?php endif; ?>

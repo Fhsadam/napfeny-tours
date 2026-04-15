@@ -12,8 +12,6 @@ class HotelController
 {
     public function index(): void
     {
-        require_admin();
-
         render('hotels/index', [
             'title' => 'CRUD - Szállodák',
             'hotels' => Hotel::allWithLocation(),

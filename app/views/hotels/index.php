@@ -1,9 +1,11 @@
 <section class="section-heading row-between">
     <div>
-        <h1>CRUD - Szállodák</h1>
-        <p>Ezen az oldalon lehet kezelni a szállodák adatait.</p>
+        <h1>Szállodák</h1>
+        <p>Itt láthatók a szállodák adatai. Vendégként csak megtekinthetők, admin belépéssel szerkeszthetők is.</p>
     </div>
-    <a class="btn" href="<?= e(url('crud/uj')) ?>">Új szálloda</a>
+    <?php if (is_admin()): ?>
+        <a class="btn" href="<?= e(url('crud/uj')) ?>">Új szálloda</a>
+    <?php endif; ?>
 </section>
 
 <div class="table-wrap">
@@ -18,7 +20,7 @@
                 <th>Tengerpart</th>
                 <th>Reptér</th>
                 <th>Félpanzió</th>
-                <th>Műveletek</th>
+                <th><?= is_admin() ? 'Műveletek' : 'Állapot' ?></th>
             </tr>
         </thead>
         <tbody>
@@ -33,18 +35,21 @@
                 <td><?= e((string) $hotel['repter_tav']) ?> km</td>
                 <td><?= (int) $hotel['felpanzio'] === 1 ? 'Igen' : 'Nem' ?></td>
                 <td class="actions">
-                    <a class="btn btn-sm btn-outline" href="<?= e(url('crud/szerkeszt/' . $hotel['az'])) ?>">Szerkesztés</a>
-                    <form action="<?= e(url('crud/torles/' . $hotel['az'])) ?>" method="post" onsubmit="return confirm('Biztosan törlöd ezt a szállodát?');">
-                        <input type="hidden" name="_token" value="<?= e(csrf_token()) ?>">
-                        <button class="btn btn-sm btn-danger" type="submit">Törlés</button>
-                    </form>
+                    <?php if (is_admin()): ?>
+                        <a class="btn btn-sm btn-outline" href="<?= e(url('crud/szerkeszt/' . $hotel['az'])) ?>">Szerkesztés</a>
+                        <form action="<?= e(url('crud/torles/' . $hotel['az'])) ?>" method="post" onsubmit="return confirm('Biztosan törlöd ezt a szállodát?');">
+                            <input type="hidden" name="_token" value="<?= e(csrf_token()) ?>">
+                            <button class="btn btn-sm btn-danger" type="submit">Törlés</button>
+                        </form>
+                    <?php else: ?>
+                        <span class="badge-readonly">Csak megtekintés</span>
+                    <?php endif; ?>
                 </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
     </table>
 </div>
-
 
 <section class="section">
     <div class="section-heading">
@@ -107,6 +112,7 @@
     </div>
 </section>
 
+<?php if (is_admin()): ?>
 <section class="section">
     <div class="section-heading">
         <h2>Legutóbbi üzenetek</h2>
@@ -135,3 +141,4 @@
         </table>
     </div>
 </section>
+<?php endif; ?>

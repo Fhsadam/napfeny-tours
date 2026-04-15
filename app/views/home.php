@@ -4,9 +4,7 @@
         <h1>Utazási ajánlatok napfényes úti célokhoz</h1>
         <p class="lead">Ezen az oldalon a legnépszerűbb helyszínek, szállodák és ajánlatok láthatók egy helyen. A főoldalon videók és térkép is segíti a tájékozódást.</p>
         <div class="hero-actions">
-            <?php if (is_admin()): ?>
-                <a class="btn" href="<?= e(url('crud')) ?>">Admin felület</a>
-            <?php endif; ?>
+            <a class="btn" href="<?= e(url('crud')) ?>">Szállodák</a>
             <a class="btn btn-outline" href="<?= e(url('kepek')) ?>">Képgaléria</a>
         </div>
     </div>

@@ -144,3 +144,5 @@ code { background: rgba(13,110,253,.1); padding: .2rem .45rem; border-radius: .5
 
 .admin-panels h3 { margin: 0 0 .75rem; }
 .admin-mini-table { min-width: 100%; }
+
+.badge-readonly { display: inline-block; padding: .45rem .7rem; border-radius: 999px; background: #eef2f7; color: #334155; font-size: .9rem; font-weight: 600; }
