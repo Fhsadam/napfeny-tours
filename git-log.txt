@@ -1,3 +1,5 @@
+35e451c | 2026-04-15 | Festő-Hegedűs Sándor Ádám | Repo tisztitasa es veglegesites
+b91c22c | 2026-04-15 | Festő-Hegedűs Sándor Ádám | Sajat nevek es neptun kodok beallitasa
 20d560e | 2026-04-15 | Festő-Hegedűs Sándor Ádám | Leadashoz szukseges kitoltendo adatok listaja
 202dcfb | 2026-04-15 | Turjányi Dávid | Projekt belépési pontok és konfigurációk
 d57c25c | 2026-04-14 | Festő-Hegedűs Sándor Ádám | Dokumentációhoz képernyőképek
