@@ -9,4 +9,5 @@ return [
     'office_email' => 'info@napfenytours.local',
     'demo_login' => 'demo',
     'demo_password' => 'Demo12345!',
+    'admin_logins' => ['demo'],
 ];

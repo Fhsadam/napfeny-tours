@@ -1,6 +1,6 @@
 <section class="section-heading">
     <h1>Képgaléria</h1>
-    <p>A feltöltés csak bejelentkezett felhasználó számára engedélyezett.</p>
+    <p>Új képet csak bejelentkezett felhasználó tölthet fel.</p>
 </section>
 
 <?php if (is_logged_in()): ?>

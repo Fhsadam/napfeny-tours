@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($title ?? config('app.name')) ?></title>
-    <meta name="description" content="Napfény Tours - utazási ajánlatok, képgaléria, kapcsolat és CRUD admin felület.">
+    <meta name="description" content="Napfény Tours - utazási ötletek, képgaléria, kapcsolat és admin felület.">
     <link rel="stylesheet" href="<?= e(url('assets/css/style.css')) ?>">
     <script defer src="<?= e(url('assets/js/app.js')) ?>"></script>
 </head>
@@ -16,7 +16,7 @@
             <span class="brand-logo">☀️</span>
             <span>
                 <strong>Napfény Tours</strong>
-                <small>utazási ajánlatok adatbázissal</small>
+                <small>nyaralási ötletek és szállásajánlatok</small>
             </span>
         </a>
         <div class="header-user">
@@ -41,7 +41,9 @@
             <?php if (is_logged_in()): ?>
                 <a href="<?= e(url('uzenetek')) ?>" class="<?= current_route() === 'uzenetek' ? 'active' : '' ?>">Üzenetek</a>
             <?php endif; ?>
-            <a href="<?= e(url('crud')) ?>" class="<?= str_starts_with(current_route(), 'crud') ? 'active' : '' ?>">CRUD</a>
+            <?php if (is_admin()): ?>
+                <a href="<?= e(url('crud')) ?>" class="<?= str_starts_with(current_route(), 'crud') ? 'active' : '' ?>">CRUD</a>
+            <?php endif; ?>
             <?php if (!is_logged_in()): ?>
                 <a href="<?= e(url('bejelentkezes')) ?>" class="<?= current_route() === 'bejelentkezes' ? 'active' : '' ?>">Bejelentkezés</a>
             <?php endif; ?>
@@ -61,7 +63,7 @@
     <div class="container footer-grid">
         <section>
             <h3>Napfény Tours</h3>
-            <p>Modern, reszponzív PHP webalkalmazás front-controller szerkezettel.</p>
+            <p>Utazási témájú weboldal képgalériával, kapcsolat űrlappal és admin felülettel.</p>
         </section>
         <section>
             <h3>Kapcsolat</h3>
@@ -70,8 +72,8 @@
             <p><?= e(config('app.office_email')) ?></p>
         </section>
         <section>
-            <h3>Fejlesztői gyors belépés</h3>
-            <p>Demó bejelentkezés: <code><?= e(config('app.demo_login')) ?></code> / <code><?= e(config('app.demo_password')) ?></code></p>
+            <h3>Admin belépés</h3>
+            <p>Admin teszt belépés: <code><?= e(config('app.demo_login')) ?></code> / <code><?= e(config('app.demo_password')) ?></code></p>
         </section>
     </div>
 </footer>

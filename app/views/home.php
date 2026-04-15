@@ -2,9 +2,11 @@
     <div class="hero-copy">
         <p class="eyebrow">Felfedezés • tengerpart • élmény</p>
         <h1>Utazási ajánlatok napfényes úti célokhoz</h1>
-        <p class="lead">A beadandó alkalmazás a megadott utazás-adatbázist használja fel. A főoldalon a téma bemutatása, ajánlatok, videók és térkép is megjelenik.</p>
+        <p class="lead">Ezen az oldalon a legnépszerűbb helyszínek, szállodák és ajánlatok láthatók egy helyen. A főoldalon videók és térkép is segíti a tájékozódást.</p>
         <div class="hero-actions">
-            <a class="btn" href="<?= e(url('crud')) ?>">CRUD megnyitása</a>
+            <?php if (is_admin()): ?>
+                <a class="btn" href="<?= e(url('crud')) ?>">Admin felület</a>
+            <?php endif; ?>
             <a class="btn btn-outline" href="<?= e(url('kepek')) ?>">Képgaléria</a>
         </div>
     </div>
@@ -32,7 +34,7 @@
 <section class="section">
     <div class="section-heading">
         <h2>Kiemelt ajánlatok</h2>
-        <p>Az adatbázisból a legalacsonyabb árú ajánlatok listája.</p>
+        <p>Néhány kedvező árú ajánlat a jelenlegi kínálatból.</p>
     </div>
     <div class="offer-grid">
         <?php foreach ($offers as $offer): ?>
@@ -69,7 +71,7 @@
 <section class="section map-section">
     <div class="section-heading">
         <h2>Irodánk helye</h2>
-        <p>Google térkép a kiválasztott utazási iroda budapesti címéhez.</p>
+        <p>A budapesti iroda helye Google térképen.</p>
     </div>
     <div class="iframe-wrap map-wrap">
         <iframe

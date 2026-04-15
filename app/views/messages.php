@@ -1,6 +1,6 @@
 <section class="section-heading">
     <h1>Üzenetek</h1>
-    <p>Az üzenetek adatbázisból, fordított időrendben jelennek meg.</p>
+    <p>Az elküldött üzenetek itt jelennek meg, a legfrissebbel az elején.</p>
 </section>
 
 <div class="table-wrap">

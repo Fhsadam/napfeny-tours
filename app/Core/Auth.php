@@ -38,6 +38,17 @@ class Auth
         session_regenerate_id(true);
     }
 
+    public static function isAdmin(): bool
+    {
+        $user = self::user();
+        if (!$user) {
+            return false;
+        }
+
+        $adminLogins = config('app.admin_logins', []);
+        return in_array($user['login_name'] ?? '', $adminLogins, true);
+    }
+
     public static function logout(): void
     {
         unset($_SESSION['user_id']);

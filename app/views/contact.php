@@ -6,7 +6,7 @@ if ($contactName === '' && current_user()) {
 ?>
 <section class="section-heading">
     <h1>Kapcsolat</h1>
-    <p>Az űrlap kliens- és szerveroldalon is ellenőrzi az adatokat, majd az üzenetet elmenti az adatbázisba.</p>
+    <p>Az űrlap ellenőrzi a megadott adatokat, majd elmenti az üzenetet.</p>
 </section>
 
 <section class="card">

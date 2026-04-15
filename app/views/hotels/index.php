@@ -1,7 +1,7 @@
 <section class="section-heading row-between">
     <div>
         <h1>CRUD - Szállodák</h1>
-        <p>A kiválasztott adatbázis <code>szalloda</code> táblájához készült útvonalas CRUD felület.</p>
+        <p>Ezen az oldalon lehet kezelni a szállodák adatait.</p>
     </div>
     <a class="btn" href="<?= e(url('crud/uj')) ?>">Új szálloda</a>
 </section>

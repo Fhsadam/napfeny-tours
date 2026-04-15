@@ -124,11 +124,29 @@ function is_logged_in(): bool
     return Auth::check();
 }
 
+function is_admin(): bool
+{
+    return Auth::isAdmin();
+}
+
 function require_auth(): void
 {
     if (!is_logged_in()) {
         flash('error', 'Ehhez a művelethez előbb jelentkezz be.');
         redirect('bejelentkezes');
+    }
+}
+
+function require_admin(): void
+{
+    if (!is_logged_in()) {
+        flash('error', 'Ehhez a művelethez előbb jelentkezz be.');
+        redirect('bejelentkezes');
+    }
+
+    if (!is_admin()) {
+        flash('error', 'A CRUD felület csak admin jogosultsággal érhető el.');
+        redirect('');
     }
 }
 

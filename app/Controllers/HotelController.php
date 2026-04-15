@@ -10,6 +10,8 @@ class HotelController
 {
     public function index(): void
     {
+        require_admin();
+
         render('hotels/index', [
             'title' => 'CRUD - Szállodák',
             'hotels' => Hotel::allWithLocation(),
@@ -18,6 +20,8 @@ class HotelController
 
     public function create(): void
     {
+        require_admin();
+
         render('hotels/form', [
             'title' => 'Új szálloda felvétele',
             'hotel' => null,
@@ -29,6 +33,8 @@ class HotelController
 
     public function store(): void
     {
+        require_admin();
+
         verify_csrf();
         $data = $this->collectData();
         old_input($data);
@@ -51,6 +57,8 @@ class HotelController
 
     public function edit(string $code): void
     {
+        require_admin();
+
         $hotel = Hotel::find($code);
         if (!$hotel) {
             flash('error', 'A keresett szálloda nem található.');
@@ -68,6 +76,8 @@ class HotelController
 
     public function update(string $code): void
     {
+        require_admin();
+
         verify_csrf();
         $hotel = Hotel::find($code);
         if (!$hotel) {
@@ -93,6 +103,8 @@ class HotelController
 
     public function delete(string $code): void
     {
+        require_admin();
+
         verify_csrf();
 
         if (!Hotel::find($code)) {
