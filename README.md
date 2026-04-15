@@ -1,6 +1,6 @@
 # Napfény Tours – Web-programozás 1 beadandó
 
-Ez a mintaalkalmazás a megadott **Utazás – 3 táblás** adatbázist használja fel, és a 7a front-controller mintára épülő továbbfejlesztett beadandó-megoldás.
+Ez a projekt a megadott **Utazás – 3 táblás** adatbázist használja fel, és a 7a front-controller tervezési mintára épülő továbbfejlesztett beadandó-megoldás.
 
 ## Fő funkciók
 
