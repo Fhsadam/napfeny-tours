@@ -51,67 +51,6 @@
     </table>
 </div>
 
-<section class="section">
-    <div class="section-heading">
-        <h2>Adatbázis áttekintés</h2>
-        <p>Itt láthatók az adatbázis fontosabb adatai olvasási módban. Ezek tájékoztató listák, innen nem lehet szerkeszteni.</p>
-    </div>
-
-    <div class="two-column admin-panels">
-        <div>
-            <h3>Helységek</h3>
-            <div class="table-wrap">
-                <table class="data-table admin-mini-table">
-                    <thead>
-                        <tr>
-                            <th>Az.</th>
-                            <th>Ország</th>
-                            <th>Helység</th>
-                            <th>Szállodák</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach ($locations as $location): ?>
-                        <tr>
-                            <td><?= e((string) $location['az']) ?></td>
-                            <td><?= e($location['orszag']) ?></td>
-                            <td><?= e($location['nev']) ?></td>
-                            <td><?= e((string) $location['hotels']) ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div>
-            <h3>Kedvező ajánlatok</h3>
-            <div class="table-wrap">
-                <table class="data-table admin-mini-table">
-                    <thead>
-                        <tr>
-                            <th>Szálloda</th>
-                            <th>Helység</th>
-                            <th>Indulás</th>
-                            <th>Ár</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach ($offers as $offer): ?>
-                        <tr>
-                            <td><?= e($offer['szalloda_nev']) ?></td>
-                            <td><?= e($offer['helyseg_nev']) ?></td>
-                            <td><?= e(date('Y.m.d', strtotime($offer['indulas']))) ?></td>
-                            <td><?= e(number_format((int) $offer['ar'], 0, ',', ' ')) ?> Ft</td>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-
 <?php if (is_admin()): ?>
 <section class="section">
     <div class="section-heading">
