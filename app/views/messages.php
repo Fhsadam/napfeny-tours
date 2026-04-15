@@ -1,6 +1,6 @@
 <section class="section-heading">
-    <h1>Üzenetek</h1>
-    <p>Az elküldött üzenetek itt jelennek meg, a legfrissebbel az elején.</p>
+    <h1>Beérkezett üzenetek</h1>
+    <p>Ezt az oldalt csak az admin látja. Az üzenetek a legfrissebbel kezdve jelennek meg.</p>
 </section>
 
 <div class="table-wrap">

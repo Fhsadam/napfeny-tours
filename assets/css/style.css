@@ -141,3 +141,6 @@ code { background: rgba(13,110,253,.1); padding: .2rem .45rem; border-radius: .5
     .main-nav a, .btn { width: 100%; justify-content: center; }
     .nav-inner { display: grid; grid-template-columns: 1fr; }
 }
+
+.admin-panels h3 { margin: 0 0 .75rem; }
+.admin-mini-table { min-width: 100%; }

@@ -8,10 +8,10 @@ class MessageController
 {
     public function index(): void
     {
-        require_auth();
+        require_admin();
 
         render('messages', [
-            'title' => 'Üzenetek - Napfény Tours',
+            'title' => 'Admin üzenetek - Napfény Tours',
             'messages' => Message::allLatestFirst(),
         ]);
     }

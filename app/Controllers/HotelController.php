@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Core\Validator;
 use App\Models\Hotel;
 use App\Models\Location;
+use App\Models\Message;
+use App\Models\Offer;
 
 class HotelController
 {
@@ -15,6 +17,9 @@ class HotelController
         render('hotels/index', [
             'title' => 'CRUD - Szállodák',
             'hotels' => Hotel::allWithLocation(),
+            'locations' => Location::withHotelCounts(),
+            'offers' => Offer::cheapest(8),
+            'recentMessages' => array_slice(Message::allLatestFirst(), 0, 8),
         ]);
     }
 

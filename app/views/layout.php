@@ -38,7 +38,7 @@
             <a href="<?= e(url('')) ?>" class="<?= current_route() === '' || current_route() === 'fooldal' ? 'active' : '' ?>">Főoldal</a>
             <a href="<?= e(url('kepek')) ?>" class="<?= current_route() === 'kepek' ? 'active' : '' ?>">Képek</a>
             <a href="<?= e(url('kapcsolat')) ?>" class="<?= str_starts_with(current_route(), 'kapcsolat') ? 'active' : '' ?>">Kapcsolat</a>
-            <?php if (is_logged_in()): ?>
+            <?php if (is_admin()): ?>
                 <a href="<?= e(url('uzenetek')) ?>" class="<?= current_route() === 'uzenetek' ? 'active' : '' ?>">Üzenetek</a>
             <?php endif; ?>
             <?php if (is_admin()): ?>
