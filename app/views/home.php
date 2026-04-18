@@ -55,14 +55,12 @@
             <source src="<?= e(url('assets/video/promo.mp4')) ?>" type="video/mp4">
             A böngésződ nem támogatja a videólejátszást.
         </video>
-        <p>Rövid, 5 másodperces helyi videó a beadandó követelményhez.</p>
     </article>
     <article class="media-card">
         <h2>YouTube videó</h2>
         <div class="iframe-wrap">
             <iframe src="https://www.youtube.com/embed/Scxs7L0vhZ4?si=3XtV7g1cVw7tRZwa" title="Utazási inspiráció" loading="lazy" allowfullscreen></iframe>
         </div>
-        <p>Külső szolgáltatótól beágyazott videó.</p>
     </article>
 </section>
 
