@@ -1,6 +1,6 @@
 <?php
 
-$driver = getenv('DB_DRIVER') ?: 'json';
+$driver = getenv('DB_DRIVER') ?: 'mysql';
 
 return [
     'driver' => $driver,
